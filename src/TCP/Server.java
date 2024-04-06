@@ -1,8 +1,11 @@
+package TCP;
+
+import Utils.EncryptionLogic;
+
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.security.KeyPair;
-import java.security.KeyPairGenerator;
 import java.security.PrivateKey;
 import java.security.PublicKey;
 import java.util.Scanner;
@@ -87,13 +90,13 @@ public class Server {
 
     public String decryptMessage(byte[] msgClient, PrivateKey privateKey) {
         String msg = new String(logic.desencriptar(msgClient, privateKey));
-        System.out.println("Client: " + msg);
+        System.out.println("TCP.Client: " + msg);
 
         return msg;
     }
 
     public byte[] encryptMessage(PublicKey publicKeyClient) {
-        System.out.print("Server: ");
+        System.out.print("TCP.Server: ");
         String msg = sc.nextLine();
 
         return logic.encriptar(msg.getBytes(), publicKeyClient);

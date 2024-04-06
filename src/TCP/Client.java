@@ -1,3 +1,7 @@
+package TCP;
+
+import Utils.EncryptionLogic;
+
 import java.io.*;
 import java.net.InetAddress;
 import java.net.Socket;
@@ -75,7 +79,7 @@ public class Client {
     }
 
     private byte[] encryptMessage(PublicKey publicKeyServer) {
-        System.out.print("Client: ");
+        System.out.print("TCP.Client: ");
         String msg = sc.nextLine();
 
         return logic.encriptar(msg.getBytes(), publicKeyServer);
