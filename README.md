@@ -45,7 +45,7 @@ La encriptación asimétrica utiliza un par de claves distintas: una clave públ
    - Comienza a enviar y recibir mensajes en el chat.
 
 ### Demo
-![demostración de funcionamiento] (images/demo1.png)
+![demostración de funcionamiento](images/demo1.png)
 
 
 
